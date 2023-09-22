@@ -8,6 +8,7 @@
 <ul>
     <!--주의! 다음 주석을 풀면 예외가 발생함-->
     <!--    <li>"hello world!" = <span th:text="hello world!"></span></li>-->
+    <!-- 이유 : 문장 사이에 공백등이 들어가게 된다면 하나의 문자열로 인식이 아닌 두개의 토큰으로 인식하게 됨 -->
     <li>'hello' + ' world!' = <span th:text="'hello' + ' world!'"></span></li>
     <li>'hello world!' = <span th:text="'hello world!'"></span></li>
     <li>'hello ' + ${data} = <span th:text="'hello ' + ${data}"></span></li>
