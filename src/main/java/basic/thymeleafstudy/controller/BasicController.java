@@ -108,6 +108,14 @@ public class BasicController {
     // 연산 end
 
 
+    // th 속성값 설정
+    @GetMapping("/attribute")
+    public String attribute(Model model) {
+        return "basic/attribute";
+    }
+    // th 속성값 설정 end
+
+
     @Data
     static class User {
         private String username;
