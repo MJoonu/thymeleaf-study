@@ -118,10 +118,25 @@ public class BasicController {
         addUser(model);
         return "basic/each";
     }
-
     // 반복 end
 
+    // 조건부 평가
+    @GetMapping("/condition")
+    public String condition(Model model) {
+        addUser(model);
+        return "basic/condition";
+    }
+    // 조건부 평가 end
+
+    //주석
+    @GetMapping("comments")
+    public String comments(Model model) {
+        model.addAttribute("data", "Spring!");
+        return "basic/comments";
+    }
+
     private void addUser(Model model) {
+
         ArrayList<Object> list = new ArrayList<>();
         list.add(new User("userA", 10));
         list.add(new User("userB", 20));
