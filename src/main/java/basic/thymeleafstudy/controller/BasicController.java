@@ -143,12 +143,13 @@ public class BasicController {
         return "basic/block";
     }// block (그룹화) end
 
+    // 자바스크립트 인라인
     @GetMapping("/javascript")
     public String javascript(Model model) {
         model.addAttribute("user", new User("userA", 10));
         addUser(model);
         return "basic/javascript";
-    }
+    }// 자바스크립트 인라인 end
 
 
     private void addUser(Model model) {
