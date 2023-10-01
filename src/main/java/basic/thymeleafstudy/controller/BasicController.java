@@ -134,6 +134,22 @@ public class BasicController {
         model.addAttribute("data", "Spring!");
         return "basic/comments";
     }
+    // 주석 end
+
+    // block (그룹화)
+    @GetMapping("block")
+    public String block(Model model) {
+        addUser(model);
+        return "basic/block";
+    }// block (그룹화) end
+
+    @GetMapping("/javascript")
+    public String javascript(Model model) {
+        model.addAttribute("user", new User("userA", 10));
+        addUser(model);
+        return "basic/javascript";
+    }
+
 
     private void addUser(Model model) {
 
